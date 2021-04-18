@@ -44,7 +44,7 @@ class Media(Base):
     # relationship for 
     Type = Column(String(50))
     url = Column(String)
-    post_id = Column(String(50), ForeignKey('user.id'))
+    post_id = Column(Integer, ForeignKey('user.id'))
 
 
     def to_dict(self):
