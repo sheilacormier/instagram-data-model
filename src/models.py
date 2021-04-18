@@ -17,8 +17,8 @@ class User(Base):
     firstname = Column(String(50))
     lastname = Column(String(50))
     email = Column(String(100), nullable=False, unique=True)
-    posts = relationship("Post", backref="author")
-    comments = relationship("Comment", backref="author")
+    posts = relationship("Post", backref="user")
+    comments = relationship("Comment", backref="user")
 
 class Post(Base):
     __tablename__ = 'post'
